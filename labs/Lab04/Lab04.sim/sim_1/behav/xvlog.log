@@ -1,0 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steven/Desktop/Lectures/3-2/DigitalSystem/Lab04/Lab04.srcs/sources_1/imports/DigitalSystem/Shifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux16
+INFO: [VRFC 10-311] analyzing module shifter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steven/Desktop/Lectures/3-2/DigitalSystem/Lab04/Lab04.srcs/sim_1/imports/DigitalSystem/Shifter_tb_for_students.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shifter_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steven/Desktop/Lectures/3-2/DigitalSystem/Lab04/Lab04.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

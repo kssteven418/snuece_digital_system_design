@@ -1,0 +1,83 @@
+C:/Users/ECE/Desktop/1234/Shifter.v {1 {vlog -work work -stats=none C:/Users/ECE/Desktop/1234/Shifter.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux16
+-- Compiling module shifter
+
+Top level modules:
+	shifter
+
+} {} {}} C:/Users/ECE/Desktop/1234/BLKMEMSP_V6_2.v {1 {vlog -work work -stats=none C:/Users/ECE/Desktop/1234/BLKMEMSP_V6_2.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module BLKMEMSP_V6_2
+
+Top level modules:
+	BLKMEMSP_V6_2
+
+} {} {}} C:/Users/ECE/Desktop/1234/pc_skeleton.v {1 {vlog -work work -stats=none C:/Users/ECE/Desktop/1234/pc_skeleton.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module pc
+
+Top level modules:
+	pc
+
+} {} {}} C:/Users/ECE/Desktop/1234/ir_skeleton.v {1 {vlog -work work -stats=none C:/Users/ECE/Desktop/1234/ir_skeleton.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module ir
+
+Top level modules:
+	ir
+
+} {} {}} C:/Users/ECE/Desktop/1234/tb_top.v {1 {vlog -work work -stats=none C:/Users/ECE/Desktop/1234/tb_top.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb_top
+
+Top level modules:
+	tb_top
+
+} {} {}} C:/Users/ECE/Desktop/1234/imem.v {1 {vlog -work work -stats=none C:/Users/ECE/Desktop/1234/imem.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module imem
+
+Top level modules:
+	imem
+
+} {} {}} C:/Users/ECE/Desktop/1234/CLA.v {1 {vlog -work work -stats=none C:/Users/ECE/Desktop/1234/CLA.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module CLA_16Bit
+-- Compiling module CLG4
+-- Compiling module CLA4
+
+Top level modules:
+	CLA_16Bit
+
+} {} {}} C:/Users/ECE/Desktop/1234/dmem.v {1 {vlog -work work -stats=none C:/Users/ECE/Desktop/1234/dmem.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module dmem
+
+Top level modules:
+	dmem
+
+} {} {}} C:/Users/ECE/Desktop/1234/RegisterFile.v {1 {vlog -work work -stats=none C:/Users/ECE/Desktop/1234/RegisterFile.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module register_file
+
+Top level modules:
+	register_file
+
+} {} {}} C:/Users/ECE/Desktop/1234/ALU_PSR.v {1 {vlog -work work -stats=none C:/Users/ECE/Desktop/1234/ALU_PSR.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module ALU
+-- Compiling module PSR
+
+Top level modules:
+	ALU
+	PSR
+
+} {} {}} C:/Users/ECE/Desktop/1234/dsd_processer.v {1 {vlog -work work -stats=none C:/Users/ECE/Desktop/1234/dsd_processer.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module dsd_processor
+
+Top level modules:
+	dsd_processor
+
+} {} {}}

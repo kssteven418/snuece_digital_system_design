@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steven/Desktop/Lectures/3-2/DigitalSystem/Lab02/Lab02.srcs/sources_1/imports/Downloads/RegisterFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steven/Desktop/Lectures/3-2/DigitalSystem/Lab02/Lab02.srcs/sources_1/imports/Downloads/Register_file_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_file_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steven/Desktop/Lectures/3-2/DigitalSystem/Lab02/Lab02.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

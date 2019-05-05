@@ -1,0 +1,16 @@
+MO subtractor8 NULL alu.v vlg41/subtractor8.bin 1513918549
+MO buffer NULL uart_trans.v vlg1E/buffer.bin 1513918549
+MO CLA4 NULL alu.v vlg1C/_c_l_a4.bin 1513918549
+MO comparator12 NULL alu.v vlg33/comparator12.bin 1513918549
+MO golden NULL golden.v vlg39/golden.bin 1513918549
+MO imem NULL imem.v vlg50/imem.bin 1513918549
+MO CLG2 NULL alu.v vlg38/_c_l_g2.bin 1513918549
+MO CLG3 NULL alu.v vlg39/_c_l_g3.bin 1513918549
+MO CLG4 NULL alu.v vlg3A/_c_l_g4.bin 1513918549
+MO uart_baud NULL uart_baud.v vlg57/uart__baud.bin 1513918549
+MO dpcm NULL dpcm.v vlg20/dpcm.bin 1513918549
+MO top NULL top.v vlg6F/top.bin 1513918549
+MO uart_trans NULL uart_trans.v vlg23/uart__trans.bin 1513918549
+MO adder12 NULL alu.v vlg5B/adder12.bin 1513918549
+MO register4by4 NULL register4by4.v vlg20/register4by4.bin 1513918549
+MO mem_controller NULL controller.v vlg3A/mem__controller.bin 1513918549

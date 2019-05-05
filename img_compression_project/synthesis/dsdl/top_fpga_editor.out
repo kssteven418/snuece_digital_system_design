@@ -1,0 +1,107 @@
+#:C39    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.40xd
+#Current Working Directory:
+#:D   C:\Users\ECE\Dropbox\project_new_synthesis_4\dsdl
+#Date/Time:
+#:T   Thu Dec 21 23:36:17 2017
+#------------------------------
+	#Reading C:\Users\ECE\Dropbox\project_new_synthesis_4\dsdl\top.ncd...
+	#Loading device for application Rf_Device from file '3s500e.nph' in environment C:\Xilinx\14.3\ISE_DS\ISE\.
+	#   "top" is an NCD, version 3.2, device xc3s500e, package fg320, speed -4
+	#Design creation date: 2017.12.21.14.26.27
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+select -k comp 'clk'
+	#2
+unselect comp 'clk'
+	#3
+select -k comp 'clk_BUFGP/BUFG'
+	#4
+unselect comp 'clk_BUFGP/BUFG'
+	#5
+select -k comp 'u_golden/count_mux0000<4>52'
+	#6
+unselect comp 'u_golden/count_mux0000<4>52'
+	#7
+select -k comp 'u_dpcm/data1_13_2'
+	#8
+unselect comp 'u_dpcm/data1_13_2'
+	#9
+select -k comp 'u_dpcm/data1_15_0'
+	#10
+unselect comp 'u_dpcm/data1_15_0'
+	#11
+select -k comp 'u_dpcm/data1_13_2'
+	#12
+unselect comp 'u_dpcm/data1_13_2'
+	#13
+select -k comp 'u_dpcm/data1_14_7'
+	#14
+unselect comp 'u_dpcm/data1_14_7'
+	#15
+select -k comp 'u_dpcm/data1_15_5'
+	#16
+unselect comp 'u_dpcm/data1_15_5'
+	#17
+select -k comp 'u_dpcm/data1_14_6'
+	#18
+unselect comp 'u_dpcm/data1_14_6'
+	#19
+select -k comp 'u_dpcm/data1_15_5'
+	#20
+unselect comp 'u_dpcm/data1_15_5'
+	#21
+select -k comp 'u_dpcm/data1_14_7'
+	#22
+unselect comp 'u_dpcm/data1_14_7'
+	#23
+select -k comp 'u_dpcm/data1_13_2'
+	#24
+unselect comp 'u_dpcm/data1_13_2'
+	#25
+select -k comp 'u_dpcm/data1_15_0'
+	#26
+unselect comp 'u_dpcm/data1_15_0'
+	#27
+select -k comp 'u_dpcm/data1_13_2'
+	#28
+bitgen "top2.bit" " "
+	#Release 14.3 - Bitgen P.40xd (nt)
+	#Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+	#
+	#Thu Dec 21 23:45:38 2017
+	#
+	#Running DRC.
+	#WARNING:PhysDesignRules:372 - Gated clock. Clock net u_buffer/next_state_not0001 is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+	#DRC detected 0 errors and 1 warnings.  Please see the previously displayed individual error or warning messages for more details.
+	#Creating bit map...
+	#Saving bit stream in "top2.bit".
+	#Bitstream generation is complete.
+	#Done.
+	#29
+unselect comp 'u_dpcm/data1_13_2'
+	#30
+select -k comp 'u_dpcm/data1_15_0'
+	#31
+unselect comp 'u_dpcm/data1_15_0'
+	#32
+select -k net 'u_dpcm/data2_0_mux0000<141>43'
+	#33
+unselect net 'u_dpcm/data2_0_mux0000<141>43'
+	#34
+select -k clock_region 'CLOCKREGION_X1Y0'
+	#35
+unselect clock_region 'CLOCKREGION_X1Y0'
+	#36
+select -k clock_region 'CLOCKREGION_X1Y1'
+	#37
+unselect clock_region 'CLOCKREGION_X1Y1'
+	#38
+select -k clock_region 'CLOCKREGION_X1Y0'
+	#39
+unselect clock_region 'CLOCKREGION_X1Y0'
+	#40
+select -k clock_region 'CLOCKREGION_X0Y1'

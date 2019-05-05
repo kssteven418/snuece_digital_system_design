@@ -1,0 +1,903 @@
+Release 14.3 - xst P.40xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "alu.v" in library work
+Module <subtractor8> compiled
+Module <adder12> compiled
+Module <comparator12> compiled
+Module <CLG4> compiled
+Module <CLG3> compiled
+Module <CLG2> compiled
+Compiling verilog file "uart_trans.v" in library work
+Module <CLA4> compiled
+Module <buffer> compiled
+Compiling verilog file "uart_baud.v" in library work
+Module <uart_trans> compiled
+Compiling verilog file "register4by4.v" in library work
+Module <uart_baud> compiled
+Compiling verilog file "imem.v" in library work
+Module <register4by4> compiled
+Compiling verilog file "golden.v" in library work
+Module <imem> compiled
+Compiling verilog file "dpcm.v" in library work
+Module <golden> compiled
+Compiling verilog file "controller.v" in library work
+Module <dpcm> compiled
+Compiling verilog file "top.v" in library work
+Module <mem_controller> compiled
+Module <top> compiled
+No errors in compilation
+Analysis of file <"top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <top> in library <work> with parameters.
+	D = "00000000000000000000010000000000"
+	LOGD = "00000000000000000000000000001011"
+	N = "00000000000000000000000000010000"
+	W = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <mem_controller> in library <work> with parameters.
+	done = "10"
+	idle = "00"
+	real_done = "11"
+	update = "01"
+
+Analyzing hierarchy for module <register4by4> in library <work> with parameters.
+	LOGN = "00000000000000000000000000000100"
+	N = "00000000000000000000000000010000"
+	W = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <dpcm> in library <work> with parameters.
+	LOGN = "00000000000000000000000000000100"
+	N = "00000000000000000000000000010000"
+	W = "00000000000000000000000000001000"
+	compare = "10"
+	done = "11"
+	idle = "00"
+	subtract = "01"
+
+Analyzing hierarchy for module <golden> in library <work> with parameters.
+	D = "00000000000000000000010000000000"
+	LOGD = "00000000000000000000000000001011"
+	LOGN = "00000000000000000000000000000100"
+	LOGW = "00000000000000000000000000000011"
+	N = "00000000000000000000000000010000"
+	R = "00000000000000000000000000000010"
+	W = "00000000000000000000000000001000"
+	done = "111"
+	encode_one = "101"
+	encode_p = "100"
+	encode_r = "110"
+	encode_sign = "011"
+	idle = "000"
+	print_first = "010"
+	print_mode = "001"
+
+Analyzing hierarchy for module <buffer> in library <work> with parameters.
+	IDLE = "00"
+	W = "00000000000000000000000000001000"
+	WAIT = "01"
+	WAIT_AGAIN = "10"
+
+Analyzing hierarchy for module <uart_baud> in library <work>.
+
+Analyzing hierarchy for module <uart_trans> in library <work> with parameters.
+	W = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <subtractor8> in library <work>.
+
+Analyzing hierarchy for module <adder12> in library <work>.
+
+Analyzing hierarchy for module <comparator12> in library <work>.
+
+Analyzing hierarchy for module <CLG2> in library <work>.
+
+Analyzing hierarchy for module <CLA4> in library <work>.
+
+Analyzing hierarchy for module <CLG3> in library <work>.
+
+Analyzing hierarchy for module <CLG4> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <top>.
+	D = 32'sb00000000000000000000010000000000
+	LOGD = 32'sb00000000000000000000000000001011
+	N = 32'sb00000000000000000000000000010000
+	W = 32'sb00000000000000000000000000001000
+WARNING:Xst:2211 - "imem.v" line 128: Instantiating black box module <imem>.
+Module <top> is correct for synthesis.
+ 
+Analyzing module <mem_controller> in library <work>.
+	done = 2'b10
+	idle = 2'b00
+	real_done = 2'b11
+	update = 2'b01
+Module <mem_controller> is correct for synthesis.
+ 
+Analyzing module <register4by4> in library <work>.
+	LOGN = 32'sb00000000000000000000000000000100
+	N = 32'sb00000000000000000000000000010000
+	W = 32'sb00000000000000000000000000001000
+Module <register4by4> is correct for synthesis.
+ 
+Analyzing module <dpcm> in library <work>.
+	LOGN = 32'sb00000000000000000000000000000100
+	N = 32'sb00000000000000000000000000010000
+	W = 32'sb00000000000000000000000000001000
+	compare = 2'b10
+	done = 2'b11
+	idle = 2'b00
+	subtract = 2'b01
+Module <dpcm> is correct for synthesis.
+ 
+Analyzing module <subtractor8> in library <work>.
+Module <subtractor8> is correct for synthesis.
+ 
+Analyzing module <CLG2> in library <work>.
+Module <CLG2> is correct for synthesis.
+ 
+Analyzing module <CLA4> in library <work>.
+Module <CLA4> is correct for synthesis.
+ 
+Analyzing module <CLG4> in library <work>.
+Module <CLG4> is correct for synthesis.
+ 
+Analyzing module <adder12> in library <work>.
+Module <adder12> is correct for synthesis.
+ 
+Analyzing module <CLG3> in library <work>.
+Module <CLG3> is correct for synthesis.
+ 
+Analyzing module <comparator12> in library <work>.
+Module <comparator12> is correct for synthesis.
+ 
+Analyzing module <golden> in library <work>.
+	D = 32'sb00000000000000000000010000000000
+	LOGD = 32'sb00000000000000000000000000001011
+	LOGN = 32'sb00000000000000000000000000000100
+	LOGW = 32'sb00000000000000000000000000000011
+	N = 32'sb00000000000000000000000000010000
+	R = 32'sb00000000000000000000000000000010
+	W = 32'sb00000000000000000000000000001000
+	done = 3'b111
+	encode_one = 3'b101
+	encode_p = 3'b100
+	encode_r = 3'b110
+	encode_sign = 3'b011
+	idle = 3'b000
+	print_first = 3'b010
+	print_mode = 3'b001
+Module <golden> is correct for synthesis.
+ 
+Analyzing module <buffer> in library <work>.
+	IDLE = 2'b00
+	W = 32'sb00000000000000000000000000001000
+	WAIT = 2'b01
+	WAIT_AGAIN = 2'b10
+Module <buffer> is correct for synthesis.
+ 
+Analyzing module <uart_baud> in library <work>.
+Module <uart_baud> is correct for synthesis.
+ 
+Analyzing module <uart_trans> in library <work>.
+	W = 32'sb00000000000000000000000000001000
+Module <uart_trans> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <mem_controller>.
+    Related source file is "controller.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <ps> of Case statement line 49 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <ps> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found finite state machine <FSM_0> for signal <ps>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 5                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <finish>.
+    Found 1-bit register for signal <WR>.
+    Found 14-bit adder for signal <imem_address>.
+    Found 4-bit register for signal <count>.
+    Found 4-bit adder for signal <count$addsub0000> created at line 94.
+    Found 14-bit adder for signal <imem_address$addsub0000> created at line 25.
+    Found 14-bit adder for signal <imem_address$addsub0001> created at line 25.
+    Found 10-bit up counter for signal <row_col>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred   6 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+Unit <mem_controller> synthesized.
+
+
+Synthesizing Unit <register4by4>.
+    Related source file is "register4by4.v".
+WARNING:Xst:1872 - Variable <i> is used but never assigned.
+    Found 128-bit register for signal <data>.
+    Summary:
+	inferred 128 D-type flip-flop(s).
+Unit <register4by4> synthesized.
+
+
+Synthesizing Unit <golden>.
+    Related source file is "golden.v".
+WARNING:Xst:647 - Input <data_all_done> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <reseted> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <present_state> of Case statement line 117 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <present_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found finite state machine <FSM_1> for signal <present_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 20                                             |
+    | Inputs             | 11                                             |
+    | Outputs            | 11                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | stall                     (negative)           |
+    | Reset              | rst                       (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <data_out>.
+    Found 1-bit register for signal <finish>.
+    Found 12-bit down counter for signal <mem_count>.
+    Found 1-bit register for signal <start_ack>.
+    Found 1-bit register for signal <data_enable>.
+    Found 1-bit register for signal <golden_all_done>.
+    Found 8-bit register for signal <count>.
+    Found 8-bit subtractor for signal <count$share0000> created at line 176.
+    Found 8-bit subtractor for signal <count$sub0000> created at line 257.
+    Found 144-bit register for signal <data>.
+    Found 4-bit register for signal <data_left>.
+    Found 4-bit subtractor for signal <data_left$share0000> created at line 176.
+    Found 8-bit register for signal <data_to_send>.
+    Found 1-bit register for signal <mode>.
+    Found 2-bit register for signal <reminder>.
+    Found 3-bit register for signal <shift_count>.
+    Found 3-bit subtractor for signal <shift_count$share0000> created at line 176.
+    Found 1-bit register for signal <sign_to_send>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred 183 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+Unit <golden> synthesized.
+
+
+Synthesizing Unit <buffer>.
+    Related source file is "uart_trans.v".
+WARNING:Xst:647 - Input <trans_done_Tclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 2-bit latch for signal <next_state>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 2-bit register for signal <present_state>.
+    Found 1-bit register for signal <write_TDR>.
+    Found 8-bit register for signal <buffer>.
+    Found 1-bit register for signal <buffer_in>.
+    Found 2-bit 4-to-1 multiplexer for signal <next_state$mux0000>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <buffer> synthesized.
+
+
+Synthesizing Unit <uart_baud>.
+    Related source file is "uart_baud.v".
+    Found 1-bit register for signal <T_clk>.
+    Found 8-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <uart_baud> synthesized.
+
+
+Synthesizing Unit <uart_trans>.
+    Related source file is "uart_trans.v".
+WARNING:Xst:647 - Input <golden_all_done> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <buffer_in> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <buffer> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <trans_done_Tclk>.
+    Found 4-bit register for signal <BitCnt>.
+    Found 4-bit adder for signal <BitCnt$addsub0000> created at line 145.
+    Found 1-bit register for signal <state_clk>.
+    Found 1-bit register for signal <state_Tclk>.
+    Found 4-bit comparator less for signal <state_Tclk$cmp_lt0000> created at line 143.
+    Found 9-bit register for signal <TDR>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <uart_trans> synthesized.
+
+
+Synthesizing Unit <CLG2>.
+    Related source file is "alu.v".
+Unit <CLG2> synthesized.
+
+
+Synthesizing Unit <CLG4>.
+    Related source file is "alu.v".
+Unit <CLG4> synthesized.
+
+
+Synthesizing Unit <CLG3>.
+    Related source file is "alu.v".
+Unit <CLG3> synthesized.
+
+
+Synthesizing Unit <CLA4>.
+    Related source file is "alu.v".
+    Found 4-bit xor2 for signal <s>.
+    Found 4-bit xor2 for signal <p>.
+Unit <CLA4> synthesized.
+
+
+Synthesizing Unit <subtractor8>.
+    Related source file is "alu.v".
+WARNING:Xst:1780 - Signal <c2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <c1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <C_out_LCU1<1>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <subtractor8> synthesized.
+
+
+Synthesizing Unit <adder12>.
+    Related source file is "alu.v".
+WARNING:Xst:646 - Signal <C_out_LCU<2>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <adder12> synthesized.
+
+
+Synthesizing Unit <comparator12>.
+    Related source file is "alu.v".
+Unit <comparator12> synthesized.
+
+
+Synthesizing Unit <dpcm>.
+    Related source file is "dpcm.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <present_state> of Case statement line 146 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <present_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found finite state machine <FSM_2> for signal <present_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <mode>.
+    Found 1-bit register for signal <finish>.
+    Found 1-bit register for signal <start_ack>.
+    Found 4-bit register for signal <cnt>.
+    Found 4-bit subtractor for signal <cnt$addsub0000> created at line 205.
+    Found 144-bit register for signal <data1>.
+    Found 144-bit register for signal <data2>.
+    Found 12-bit register for signal <sum1>.
+    Found 12-bit register for signal <sum2>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 319 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <dpcm> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "top.v".
+WARNING:Xst:646 - Signal <mem_count<11:3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <data_out_arr_dpcm> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <data_in_reg_golden> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <data_in_reg_dpcm> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <data_all_done> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <buffer_ps> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <LED_idx3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <LED_idx2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <LED_idx1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <top> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 10
+ 14-bit adder                                          : 3
+ 3-bit subtractor                                      : 1
+ 4-bit adder                                           : 2
+ 4-bit subtractor                                      : 2
+ 8-bit subtractor                                      : 2
+# Counters                                             : 3
+ 10-bit up counter                                     : 1
+ 12-bit down counter                                   : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 95
+ 1-bit register                                        : 17
+ 12-bit register                                       : 2
+ 2-bit register                                        : 2
+ 3-bit register                                        : 1
+ 4-bit register                                        : 4
+ 8-bit register                                        : 20
+ 9-bit register                                        : 49
+# Latches                                              : 1
+ 2-bit latch                                           : 1
+# Comparators                                          : 1
+ 4-bit comparator less                                 : 1
+# Multiplexers                                         : 1
+ 2-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 85
+ 1-bit xor2                                            : 68
+ 4-bit xor2                                            : 17
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <u_dpcm/present_state/FSM> on signal <present_state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+ 11    | 10
+-------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <u_golden/present_state/FSM> on signal <present_state[1:8]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00000001
+ 001   | 00000010
+ 010   | 00000100
+ 011   | 00001000
+ 100   | 00100000
+ 101   | 00010000
+ 110   | 01000000
+ 111   | 10000000
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <u_controller/ps/FSM> on signal <ps[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+ 11    | 10
+-------------------
+Reading core <imem.ngc>.
+Loading core <imem> for timing and area information for instance <u_imem>.
+WARNING:Xst:1290 - Hierarchical block <clg4> is unconnected in block <cla4_0>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <clg4> is unconnected in block <cla4_1>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <clg4> is unconnected in block <cla4_2>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 3
+# Adders/Subtractors                                   : 10
+ 14-bit adder                                          : 3
+ 3-bit subtractor                                      : 1
+ 4-bit adder                                           : 2
+ 4-bit subtractor                                      : 2
+ 8-bit subtractor                                      : 2
+# Counters                                             : 3
+ 10-bit up counter                                     : 1
+ 12-bit down counter                                   : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 665
+ Flip-Flops                                            : 665
+# Latches                                              : 1
+ 2-bit latch                                           : 1
+# Comparators                                          : 1
+ 4-bit comparator less                                 : 1
+# Multiplexers                                         : 1
+ 2-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 85
+ 1-bit xor2                                            : 68
+ 4-bit xor2                                            : 17
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top> ...
+
+Optimizing unit <mem_controller> ...
+
+Optimizing unit <register4by4> ...
+
+Optimizing unit <golden> ...
+
+Optimizing unit <uart_trans> ...
+
+Optimizing unit <buffer> ...
+
+Optimizing unit <subtractor8> ...
+
+Optimizing unit <comparator12> ...
+
+Optimizing unit <dpcm> ...
+WARNING:Xst:2677 - Node <u_golden/finish> of sequential type is unconnected in block <top>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 19.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 706
+ Flip-Flops                                            : 706
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 4
+
+Cell Usage :
+# BELS                             : 1840
+#      GND                         : 2
+#      INV                         : 17
+#      LUT1                        : 17
+#      LUT2                        : 41
+#      LUT2_D                      : 3
+#      LUT2_L                      : 2
+#      LUT3                        : 357
+#      LUT3_D                      : 4
+#      LUT3_L                      : 118
+#      LUT4                        : 846
+#      LUT4_D                      : 36
+#      LUT4_L                      : 47
+#      MUXCY                       : 27
+#      MUXF5                       : 291
+#      VCC                         : 2
+#      XORCY                       : 30
+# FlipFlops/Latches                : 708
+#      FDC                         : 31
+#      FDCE                        : 166
+#      FDE                         : 494
+#      FDP                         : 9
+#      FDPE                        : 5
+#      FDSE                        : 1
+#      LD                          : 2
+# RAMS                             : 8
+#      RAMB16_S1_S1                : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 3
+#      IBUF                        : 2
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      771  out of   4656    16%  
+ Number of Slice Flip Flops:            708  out of   9312     7%  
+ Number of 4 input LUTs:               1488  out of   9312    15%  
+ Number of IOs:                           4
+ Number of bonded IOBs:                   4  out of    232     1%  
+ Number of BRAMs:                         8  out of     20    40%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                               | Clock buffer(FF name)                                                                                                      | Load  |
+-----------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------+
+clk                                                        | BUFGP                                                                                                                      | 699   |
+u_imem/N1                                                  | NONE(u_imem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/s3_init.ram/dpram.dp1x1.ram)| 8     |
+u_uart_baud/T_clk                                          | NONE(u_uart_trans/trans_done_Tclk)                                                                                         | 15    |
+u_buffer/next_state_not0001(u_buffer/next_state_not00011:O)| NONE(*)(u_buffer/next_state_1)                                                                                             | 2     |
+-----------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 211   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.741ns (Maximum Frequency: 114.403MHz)
+   Minimum input arrival time before clock: 5.280ns
+   Maximum output required time after clock: 4.394ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.741ns (frequency: 114.403MHz)
+  Total number of paths / destination ports: 15035 / 1149
+-------------------------------------------------------------------------
+Delay:               8.741ns (Levels of Logic = 5)
+  Source:            u_golden/count_3 (FF)
+  Destination:       u_golden/data_0_8 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: u_golden/count_3 to u_golden/data_0_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.591   0.706  u_golden/count_3 (u_golden/count_3)
+     LUT4_D:I0->O          4   0.704   0.591  u_golden/Msub_count_share0000_cy<3>11 (u_golden/Msub_count_share0000_cy<3>)
+     LUT4:I3->O           40   0.704   1.269  u_golden/present_state_cmp_eq00001 (u_golden/present_state_cmp_eq0000)
+     LUT4:I3->O            1   0.704   0.424  u_golden/data_0_mux0000<135>1_SW1 (N847)
+     LUT4_D:I3->O        143   0.704   1.332  u_golden/data_0_mux0000<135>1 (u_golden/N01)
+     LUT4:I2->O            1   0.704   0.000  u_golden/data_9_mux0000<61>26 (u_golden/data_9_mux0000<61>)
+     FDE:D                     0.308          u_golden/data_9_7
+    ----------------------------------------
+    Total                      8.741ns (4.419ns logic, 4.322ns route)
+                                       (50.6% logic, 49.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u_uart_baud/T_clk'
+  Clock period: 4.121ns (frequency: 242.660MHz)
+  Total number of paths / destination ports: 57 / 15
+-------------------------------------------------------------------------
+Delay:               4.121ns (Levels of Logic = 2)
+  Source:            u_uart_trans/state_Tclk (FF)
+  Destination:       u_uart_trans/BitCnt_2 (FF)
+  Source Clock:      u_uart_baud/T_clk rising
+  Destination Clock: u_uart_baud/T_clk rising
+
+  Data Path: u_uart_trans/state_Tclk to u_uart_trans/BitCnt_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             15   0.591   1.192  u_uart_trans/state_Tclk (u_uart_trans/state_Tclk)
+     LUT2:I0->O            2   0.704   0.622  u_uart_trans/BitCnt_mux0000<0>11 (u_uart_trans/N3)
+     LUT4:I0->O            1   0.704   0.000  u_uart_trans/BitCnt_mux0000<1>1 (u_uart_trans/BitCnt_mux0000<1>)
+     FDC:D                     0.308          u_uart_trans/BitCnt_2
+    ----------------------------------------
+    Total                      4.121ns (2.307ns logic, 1.814ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 501 / 501
+-------------------------------------------------------------------------
+Offset:              5.280ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       u_golden/reminder_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to u_golden/reminder_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           216   1.218   1.495  reset_IBUF (reset_IBUF)
+     LUT2:I0->O          175   0.704   1.307  u_golden/data_15_and00001 (u_golden/data_15_and0000)
+     FDE:CE                    0.555          u_golden/data_15_0
+    ----------------------------------------
+    Total                      5.280ns (2.477ns logic, 2.803ns route)
+                                       (46.9% logic, 53.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u_uart_baud/T_clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.394ns (Levels of Logic = 1)
+  Source:            u_uart_trans/TDR_0 (FF)
+  Destination:       TxD (PAD)
+  Source Clock:      u_uart_baud/T_clk rising
+
+  Data Path: u_uart_trans/TDR_0 to TxD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              3   0.591   0.531  u_uart_trans/TDR_0 (u_uart_trans/TDR_0)
+     OBUF:I->O                 3.272          TxD_OBUF (TxD)
+    ----------------------------------------
+    Total                      4.394ns (3.863ns logic, 0.531ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.33 secs
+ 
+--> 
+
+Total memory usage is 298776 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   26 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

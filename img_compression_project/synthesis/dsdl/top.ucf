@@ -1,0 +1,7 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "clk" LOC = C9;
+NET "reset" LOC = D18;
+NET "sw" LOC = H18;
+NET "TxD" LOC = M14;

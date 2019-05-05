@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\ECE\Dropbox\project_new_synthesis_5\dsdl\top.ncd
+OUTFILE=C:\Users\ECE\Dropbox\project_new_synthesis_5\dsdl\top.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Users\ECE\Dropbox\project_new_synthesis_5\dsdl
+LICENSE=WebPack
+USER_INFO=210698964_1777488715_210550733_006

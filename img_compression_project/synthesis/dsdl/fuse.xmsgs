@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/ECE/Dropbox/project_new_synthesis_4/dsdl/top_sim.v" Line 137: Port <arg fmt="%s" index="1">mem_count</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/ECE/Dropbox/project_new_synthesis_4/dsdl/top_sim.v" Line 140: Port <arg fmt="%s" index="1">present_state</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/ECE/Dropbox/project_new_synthesis_4/dsdl/alu.v" Line 69: Port <arg fmt="%s" index="1">s</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/ECE/Dropbox/project_new_synthesis_4/dsdl/alu.v" Line 70: Port <arg fmt="%s" index="1">s</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/ECE/Dropbox/project_new_synthesis_4/dsdl/alu.v" Line 71: Port <arg fmt="%s" index="1">s</arg> is not connected to this instance
+</msg>
+
+</messages>
+

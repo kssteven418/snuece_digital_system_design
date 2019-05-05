@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steven/Desktop/Lectures/3-2/DigitalSystem/Lab05/Lab05.srcs/sources_1/imports/lab5_17/decoder_skeleton.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steven/Desktop/Lectures/3-2/DigitalSystem/Lab05/Lab05.srcs/sim_1/imports/lab5_17/decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steven/Desktop/Lectures/3-2/DigitalSystem/Lab05/Lab05.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

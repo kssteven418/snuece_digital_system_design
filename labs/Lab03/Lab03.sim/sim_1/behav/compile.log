@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steven/Desktop/Lectures/3-2/DigitalSystem/Lab03/Lab03.srcs/sources_1/imports/DigitalSystem/CLA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CLA_16Bit
+INFO: [VRFC 10-311] analyzing module CLG4
+INFO: [VRFC 10-311] analyzing module CLA4
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steven/Desktop/Lectures/3-2/DigitalSystem/Lab03/Lab03.srcs/sim_1/imports/DigitalSystem/CLA_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench_for_lab3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steven/Desktop/Lectures/3-2/DigitalSystem/Lab03/Lab03.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
